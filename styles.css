@@ -13,7 +13,7 @@ body{
 header{
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding-top: 40px;
     top: 0;
     gap:10px
 }
@@ -22,7 +22,7 @@ header{
     gap: 18px;
     justify-content: space-between;
     position: fixed;
-    width: 90%;
+    width: 100%;
     height: 58px;
     top: 0;
     align-items: center;
@@ -58,10 +58,9 @@ header{
     color: #000;
     text-decoration: none;
     font-family: serif;
-    padding: 5px;
 }
-.left-icons a:hover{
-    background-color: #f3f3f3;
+.menu-toggle{
+    display: none;
 }
 .main-content{
     display: flex;
@@ -104,7 +103,7 @@ header{
     line-height: 25px;
 }
 .home-description button{
-    width: 50%;
+    width: 100%;
     padding: 8px 32px;
     border: none;
     background-color: #0c645b;
@@ -193,7 +192,7 @@ header{
     align-items: center;
 }
 .photo-section img{
-    width: 90%;
+    width: 95%;
     filter: brightness(0.97);
 }
 .photo-section img:hover{
@@ -252,7 +251,6 @@ header{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
-    margin-bottom: 10px;
     color: #423434;
 }
 .left1 span{
@@ -264,53 +262,92 @@ footer a{
     color: #000;
 }
 @media(max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
     .heading-section{
         top: 0;
-        left: 0;
-        height: 54px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 5%;
+        font-size: 35px;
     }
     #index{
         display: none;
     }
     .left-icons{
         display: flex;
-        font-size: 12px;
+        font-size: 25px;
         gap: -45px;
+        padding-top: 40px;
     }
     .icons{
         display: none;
     }
+    .home-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 25px;
+    }
     .home-description{
         width: 100%;
         order: 2;
+        display: flex;
+        justify-self: center;
+    }
+    .left-icons ul{
+        display: none;
+    }
+    .menu-toggle{
+        display: block;
     }
     .photo-description img{
         width: 100%;
-        display: block;
     }
     .home-description p{
         display: none;
     }
+    .home-description h3{
+        text-align: center;
+    }
     .home-description button{
-        width: 100%;
+        width: 80%;
+        font-size: 25px;
+        padding: 16px 32px;
+        margin-left: 37px;
+
     }
     .about-me{
         display: flex;
         flex-direction: column;
         width: 100%;
+        font-size: 25px;
+    }
+    .about-me p{
+        line-height: 40px;
+        text-align: left;
+    }
+    .about-me h3{
+        font-size: 35px;
     }
     .skills{
         display: inline;
         background: none;
+        margin-bottom: -30px;
     }
     .skills-decr{
         width: 100%;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
         margin-bottom: 20px;
+        font-size: 30px;
+        padding-top: 15px;
     }
     .main{
         display: inline;
+        font-size: 35px;
     }
     .blogs{
         width: 100%;
@@ -323,14 +360,36 @@ footer a{
     }
     .photo-section{
         display: inline;
+        width: 100%;
     }
     .photo-section img{
-        margin: 15px;
+        margin-top: 15px;
+    }
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-descr input, 
+    .contact-descr textarea,
+    .contact-descr button{
+        width: 100%;
+        font-size: 20px;
     }
     .social-media{
-        font-size: 20px;
-        padding-left: 12px;
+        font-size: 30px;
+        padding: 12px;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .footer2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+    }
+    .right1{
+        display: none;
     }
 }
